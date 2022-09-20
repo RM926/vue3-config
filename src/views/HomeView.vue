@@ -14,18 +14,16 @@ import {
   onBeforeUnmount,
   onBeforeUpdate,
   onDeactivated
-} from "vue"
-import HelloWorld from "@/components/HelloWorld.vue" // @ is an alias to /src
+} from "vue";
+import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 
 export default defineComponent({
   name: "HomeView",
-  components: {
-    HelloWorld
-  }
-
-
 
 
   
+  components: {
+    HelloWorld
+  },
 })
 </script>
