@@ -143,21 +143,22 @@ trim_trailing_whitespace = false
   ```
 
   #### 1.5.1 代码提交风格
+  https://ruby-china.org/topics/15737
+  #### 1.5.2 代码提交验证
   如果我们按照cz来规范了提交风格，但是依然有同事通过 `git commit`按照不规范的格式提交应该怎么呢？
   - 我们可以荣国commitlint来限制提交;
   1. 安装commitlint、config0conventional和@commitlint/cli
    ```js
    npm i @commitlint/config-conventional @commitlint/cli -D
    ```
-   1. 在根目录创建commitlint.config.js文件，配置commitlint
+  2. 在根目录创建commitlint.config.js文件，配置commitlint
    ```js
    module.exports = {
     extends: ['@commitlint/config-conventional']
    }
    ```
-   1. 使用husky生成commit-msg文件，验证提交信息：
+  3. 使用husky生成commit-msg文件，验证提交信息：
    ```js
    npx husky add .husky/commit-msg "npx --no-install commitlint --edit $1"
    ```
-  #### 1.5.2 代码提交验证
     
